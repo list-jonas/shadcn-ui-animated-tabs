@@ -12,7 +12,12 @@ const TabContent = ({ name }: TabContentProps) => {
         <CardTitle>{name}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>{loremIpsum()}</p>
+        <p>
+          {loremIpsum({
+            count: 1,
+            units: "paragraph",
+          })}
+        </p>
       </CardContent>
     </Card>
   );
