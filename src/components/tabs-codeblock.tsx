@@ -1,3 +1,5 @@
+"use client";
+
 import { Code } from "@geist-ui/core";
 
 const code = `function MyComponent(props) {

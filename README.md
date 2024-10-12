@@ -15,9 +15,7 @@ Welcome to the Shadcn/UI - Animated Tabs Styles repository! This project is a Ne
   - [Author](#author)
   - [Stats](#stats)
   - [Live Preview](#live-preview)
-  - [Screenshots](#screenshots)
-    - [Dark Theme - Tabs View](#dark-theme---tabs-view)
-    - [Light Theme - Tabs View](#light-theme---tabs-view)
+  - [Star History](#star-history)
 
 ## Introduction
 
@@ -121,14 +119,16 @@ Created by Jonas. For more projects and information, visit [Jonas' Website](http
 
 Check out the live preview of the site [here](https://shadcn-ui-animated-tabs.vercel.app/).
 
-## Screenshots
-
-### Dark Theme - Tabs View
-![Dark Theme - Tabs View](/images/dark_tabs.png)
-
-### Light Theme - Tabs View
-![Light Theme - Tabs View](/images/light_tabs.png)
-
 ---
 
 Thank you for checking out Shadcn/UI - Animated Tabs Styles! We hope this project serves as a useful reference for adding animations to the Shadcn tab component. If you have any questions or feedback, feel free to reach out. Happy coding!
+
+## Star History
+
+<a href="https://star-history.com/#list-jonas/shadcn-ui-animated-tabs&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date" />
+ </picture>
+</a>
