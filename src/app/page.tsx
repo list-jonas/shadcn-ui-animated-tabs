@@ -1,6 +1,9 @@
 import TabContent from "@/components/tab-content";
-import TabsCodeBlock from "@/components/tabs-codeblock";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const LandingPage = async () => {
   return (
@@ -27,7 +30,14 @@ const LandingPage = async () => {
         </TabsContent>
       </Tabs>
 
-      <TabsCodeBlock />
+      <Separator />
+
+      <Button className="w-min" asChild>
+        <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/src/components/ui/tabs.tsx">
+          <ExternalLink size={16} className="mr-2" />
+          View the code
+        </Link>
+      </Button>
     </main>
   );
 };
