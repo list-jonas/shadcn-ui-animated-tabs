@@ -7,54 +7,66 @@ import { useEffect, useRef, useState } from "react";
 
 const Tabs = TabsPrimitive.Root;
 
-// TabsList component in animated-tabs.tsx
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 >(({ className, ...props }, ref) => {
-  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, top: 0, width: 0, height: 0 })
-  const tabsListRef = useRef<HTMLDivElement | null>(null)
+  const [indicatorStyle, setIndicatorStyle] = useState({
+    left: 0,
+    top: 0,
+    width: 0,
+    height: 0,
+  });
+  const tabsListRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const updateIndicator = () => {
-      if (tabsListRef.current) {
-        const activeTab = tabsListRef.current.querySelector<HTMLElement>('[data-state="active"]')
+  const updateIndicator = React.useCallback(() => {
+    if (tabsListRef.current) {
+      const activeTab = tabsListRef.current.querySelector<HTMLElement>(
+        '[data-state="active"]'
+      );
 
-        if (activeTab) {
-          const activeRect = activeTab.getBoundingClientRect()
-          const tabsRect = tabsListRef.current.getBoundingClientRect()
-          setIndicatorStyle({
-            left: activeRect.left - tabsRect.left,
-            top: activeRect.top - tabsRect.top,
-            width: activeRect.width,
-            height: activeRect.height,
-          })
-        }
+      if (activeTab) {
+        const activeRect = activeTab.getBoundingClientRect();
+        const tabsRect = tabsListRef.current.getBoundingClientRect();
+        setIndicatorStyle({
+          left: activeRect.left - tabsRect.left,
+          top: activeRect.top - tabsRect.top,
+          width: activeRect.width,
+          height: activeRect.height,
+        });
       }
     }
+  }, []);
 
-    updateIndicator()
-    window.addEventListener('resize', updateIndicator)
-    const observer = new MutationObserver(updateIndicator)
+  useEffect(() => {
+    // Initial update
+    const timeoutId = setTimeout(updateIndicator, 0);
+
+    // Event listeners
+    window.addEventListener("resize", updateIndicator);
+    const observer = new MutationObserver(updateIndicator);
+
     if (tabsListRef.current) {
       observer.observe(tabsListRef.current, {
         attributes: true,
         childList: true,
         subtree: true,
-      })
+      });
     }
+
     return () => {
-      window.removeEventListener('resize', updateIndicator)
-      observer.disconnect()
-    }
-  }, [])
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", updateIndicator);
+      observer.disconnect();
+    };
+  }, [updateIndicator]);
 
   return (
     <div className="relative" ref={tabsListRef}>
       <TabsPrimitive.List
         ref={ref}
         className={cn(
-          'relative inline-flex items-center justify-center rounded-md bg-muted p-1 text-muted-foreground',
+          "relative inline-flex items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
           className
         )}
         {...props}
@@ -64,9 +76,9 @@ const TabsList = React.forwardRef<
         style={indicatorStyle}
       />
     </div>
-  )
-})
-TabsList.displayName = TabsPrimitive.List.displayName
+  );
+});
+TabsList.displayName = TabsPrimitive.List.displayName;
 
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,

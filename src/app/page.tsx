@@ -30,11 +30,10 @@ const LandingPage = async () => {
           <TabContent name="Option 1" />
         </TabsContent>
       </Tabs>
-
       {/* Vertical tabs */}
       <Tabs
         orientation="vertical"
-        defaultValue="option1"
+        defaultValue="option3"
         className="flex flex-row gap-2"
       >
         <TabsList className="m-0 flex flex-col items-stretch w-full h-auto">
@@ -55,6 +54,24 @@ const LandingPage = async () => {
         </TabsContent>
         <TabsContent className="mt-0" value="option4">
           <TabContent name="Option 4" />
+        </TabsContent>
+      </Tabs>
+
+      {/* Tabs with a default value */}
+      <Tabs defaultValue="option2">
+        <TabsList className={"mb-2"}>
+          <TabsTrigger value={"option1"}>Option 1</TabsTrigger>
+          <TabsTrigger value={"option2"}>Option 2</TabsTrigger>
+          <TabsTrigger value={"option3"}>Option 3</TabsTrigger>
+        </TabsList>
+        <TabsContent className="mt-0" value="option1">
+          <TabContent name="Option 1" />
+        </TabsContent>
+        <TabsContent className="mt-0" value="option2">
+          <TabContent name="Option 2" />
+        </TabsContent>
+        <TabsContent className="mt-0" value="option3">
+          <TabContent name="Option 3" />
         </TabsContent>
       </Tabs>
 
