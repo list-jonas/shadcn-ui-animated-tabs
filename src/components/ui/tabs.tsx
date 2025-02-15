@@ -20,22 +20,24 @@ const TabsList = React.forwardRef<
   const tabsListRef = useRef<HTMLDivElement | null>(null);
 
   const updateIndicator = React.useCallback(() => {
-    if (tabsListRef.current) {
-      const activeTab = tabsListRef.current.querySelector<HTMLElement>(
-        '[data-state="active"]'
-      );
+    if (!tabsListRef.current) return;
 
-      if (activeTab) {
-        const activeRect = activeTab.getBoundingClientRect();
-        const tabsRect = tabsListRef.current.getBoundingClientRect();
-        setIndicatorStyle({
-          left: activeRect.left - tabsRect.left,
-          top: activeRect.top - tabsRect.top,
-          width: activeRect.width,
-          height: activeRect.height,
-        });
-      }
-    }
+    const activeTab = tabsListRef.current.querySelector<HTMLElement>(
+      '[data-state="active"]'
+    );
+    if (!activeTab) return;
+
+    const activeRect = activeTab.getBoundingClientRect();
+    const tabsRect = tabsListRef.current.getBoundingClientRect();
+
+    requestAnimationFrame(() => {
+      setIndicatorStyle({
+        left: activeRect.left - tabsRect.left,
+        top: activeRect.top - tabsRect.top,
+        width: activeRect.width,
+        height: activeRect.height,
+      });
+    });
   }, []);
 
   useEffect(() => {
