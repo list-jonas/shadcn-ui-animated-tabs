@@ -1,3 +1,4 @@
+import { GitHubStarButton } from "@/components/github-star-button";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeSelect } from "@/components/theme/theme-select";
 import { cn } from "@/lib/utils";
@@ -42,7 +43,10 @@ export default function RootLayout({
             <nav className="w-full py-4 border-b mb-4">
               <div className="container flex justify-between items-center">
                 <h1 className="text-lg">Shadcn/ui - Animated Tabs</h1>
-                <ThemeSelect />
+                <div className="flex items-center gap-2">
+                  <GitHubStarButton />
+                  <ThemeSelect />
+                </div>
               </div>
             </nav>
             {children}
@@ -50,10 +54,18 @@ export default function RootLayout({
               <div className="container flex justify-between">
                 <p>
                   &copy; {new Date().getFullYear()}{" "}
-                  <Link href="https://jonas-list.vercel.app/">Jonas List</Link>
+                  <Link
+                    href="https://jonas-list.vercel.app/"
+                    className="hover:underline"
+                  >
+                    Jonas List
+                  </Link>
                 </p>
                 <p>
-                  <Link href="https://ui.shadcn.com/" className="ml-2">
+                  <Link
+                    href="https://ui.shadcn.com/"
+                    className="ml-2 hover:underline"
+                  >
                     Shadcn/ui
                   </Link>
                 </p>
