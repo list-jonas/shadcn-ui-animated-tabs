@@ -9,6 +9,8 @@ Welcome to the Shadcn/UI - Animated Tabs Styles repository! This project is a Ne
   - [Introduction](#introduction)
   - [Features](#features)
   - [Installation](#installation)
+    - [CLI Installation (Recommended)](#cli-installation-recommended)
+    - [Manual](#manual)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [License](#license)
@@ -31,30 +33,25 @@ Shadcn/UI - Animated Tabs is an open-source project that demonstrates how to add
 
 ## Installation
 
-Follow these steps to set up the project locally:
+You can install the animated tabs component in two ways:
 
-1. **Clone the repository:**
-    ```sh
-    git clone https://github.com/list-jonas/shadcn-ui-animated-tabs.git
-    cd shadcn-ui-animated-tabs
-    ```
+### CLI Installation (Recommended)
 
-2. **Install dependencies:**
-    ```sh
-    npm install
-    # or
-    yarn install
-    ```
+1. Make sure you have shadcn/ui set up in your project. If not, follow the [official setup guide](https://ui.shadcn.com/docs/installation).
 
-3. **Run the development server:**
-    ```sh
-    npm run dev
-    # or
-    yarn dev
-    ```
+2. Run the following command in your project directory:
+```sh
+npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/animated-tabs.json
+```
 
-4. **Open your browser:**
-    Navigate to [http://localhost:3000](http://localhost:3000) to see the application in action.
+### Manual
+
+1. Make sure you have shadcn/ui set up in your project. If not, follow the [official setup guide](https://ui.shadcn.com/docs/installation).
+
+2. Go to [`registry/animated-tabs/animated-tabs.tsx`](https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx)  and copy the code.
+
+3. Paste the code into `components/ui/tabs.tsx`.
+
 
 ## Usage
 

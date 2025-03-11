@@ -14,6 +14,10 @@ import Link from "next/link";
 const LandingPage = async () => {
   return (
     <main className="container flex flex-col gap-6">
+      <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        Showcase
+      </h2>
+
       {/* Horizontal tabs */}
       <Tabs defaultValue="option1">
         <TabsList>
@@ -36,6 +40,7 @@ const LandingPage = async () => {
           <TabContent name="Option 1" />
         </TabsContent>
       </Tabs>
+
       {/* Vertical tabs */}
       <Tabs
         orientation="vertical"
@@ -82,6 +87,10 @@ const LandingPage = async () => {
       </Tabs>
 
       <Separator />
+
+      <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        Installation
+      </h2>
 
       <div className="flex flex-row gap-2">
         <Button className="w-min" asChild>
