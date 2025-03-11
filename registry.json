@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Shadcn Animated Tabs",
+  "homepage": "https://shadcn-ui-animated-tabs.vercel.app",
+  "author": "Jonas List",
+  "dependencies": ["@radix-ui/react-tabs"],
+  "items": [
+    {
+      "name": "animated-tabs",
+      "type": "registry:block",
+      "title": "Animated Tabs",
+      "description": "A tabs component that looks and works like the shadcn one but has animated tab transitions.",
+      "files": [
+        {
+          "path": "registry/animated-tabs/animated-tabs.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

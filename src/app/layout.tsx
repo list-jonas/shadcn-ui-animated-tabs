@@ -1,6 +1,7 @@
 import { GitHubStarButton } from "@/components/github-star-button";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeSelect } from "@/components/theme/theme-select";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Analytics } from "@vercel/analytics/react";
@@ -73,6 +74,7 @@ export default function RootLayout({
             </footer>
           </ThemeProvider>
         </TooltipProvider>
+        <Toaster />
       </body>
     </html>
   );

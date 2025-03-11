@@ -1,13 +1,23 @@
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/../registry/animated-tabs/animated-tabs";
+import CopyCLICommand from "@/components/copy-cli-command";
 import TabContent from "@/components/tab-content";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const LandingPage = async () => {
   return (
     <main className="container flex flex-col gap-6">
+      <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        Showcase
+      </h2>
+
       {/* Horizontal tabs */}
       <Tabs defaultValue="option1">
         <TabsList>
@@ -30,6 +40,7 @@ const LandingPage = async () => {
           <TabContent name="Option 1" />
         </TabsContent>
       </Tabs>
+
       {/* Vertical tabs */}
       <Tabs
         orientation="vertical"
@@ -77,12 +88,19 @@ const LandingPage = async () => {
 
       <Separator />
 
-      <Button className="w-min" asChild>
-        <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/src/components/ui/tabs.tsx">
-          <ExternalLink size={16} className="mr-2" />
-          View the code
-        </Link>
-      </Button>
+      <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        Installation
+      </h2>
+
+      <div className="flex flex-row gap-2">
+        <Button className="w-min" asChild>
+          <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx">
+            <ExternalLink size={16} className="mr-2" />
+            View the code
+          </Link>
+        </Button>
+        <CopyCLICommand />
+      </div>
     </main>
   );
 };
