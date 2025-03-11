@@ -4,6 +4,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/../registry/animated-tabs/animated-tabs";
+import CopyCLICommand from "@/components/copy-cli-command";
 import TabContent from "@/components/tab-content";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -82,12 +83,15 @@ const LandingPage = async () => {
 
       <Separator />
 
-      <Button className="w-min" asChild>
-        <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx">
-          <ExternalLink size={16} className="mr-2" />
-          View the code
-        </Link>
-      </Button>
+      <div className="flex flex-row gap-2">
+        <Button className="w-min" asChild>
+          <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx">
+            <ExternalLink size={16} className="mr-2" />
+            View the code
+          </Link>
+        </Button>
+        <CopyCLICommand />
+      </div>
     </main>
   );
 };
