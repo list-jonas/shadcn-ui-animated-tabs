@@ -65,7 +65,7 @@ To use this project, follow these steps:
    - Switch between themes to see how the styles adapt.
 
 2. **Modify the animations:**
-   - Customize the tab animations by modifying the JavaScript in the file located at `src/components/ui/tabs.tsx`.
+   - Customize the tab animations by modifying the JavaScript in the file located at `registry/animated-tabs/animated-tabs.tsx`.
 
 3. **Integrate into your own project:**
    - Use the code and animation styles as a reference or starting point for integrating animated tabs into your own Next.js application.
