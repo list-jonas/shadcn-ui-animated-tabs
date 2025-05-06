@@ -144,7 +144,7 @@ const LandingPage = async () => {
         Installation
       </h2>
 
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-2 mb-6">
         <Button className="w-min" asChild>
           <Link href="https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx">
             <ExternalLink size={16} className="mr-2" />
