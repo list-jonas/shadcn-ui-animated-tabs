@@ -1,0 +1,13 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "legacy-animated-tabs",
+  "type": "registry:block",
+  "title": "Legacy Animated Tabs",
+  "description": "A legacy version of the tabs component that looks and works like the shadcn one but has animated tab transitions.",
+  "files": [
+    {
+      "path": "registry/animated-tabs/legacy-animated-tabs.tsx",
+      "type": "registry:component"
+    }
+  ]
+}

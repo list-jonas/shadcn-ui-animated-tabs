@@ -1,18 +1,14 @@
-import CopyButton from "@/components/copy-button";
-import { Input } from "./ui/input";
+import CliCommandInput from "./cli-command-input";
 
-export default function CopyCLICommand() {
+interface CopyCLICommandProps {
+  version: "current" | "legacy";
+}
+
+export default function CopyCLICommand({ version }: CopyCLICommandProps) {
   const command =
-    "npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/animated-tabs.json";
+    version === "current"
+      ? "npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/animated-tabs.json"
+      : "npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/legacy-animated-tabs.json";
 
-  return (
-    <div className="w-full relative">
-      <Input
-        value={command}
-        disabled
-        className="font-mono w-full !cursor-text"
-      />
-      <CopyButton text={command} />
-    </div>
-  );
+  return <CliCommandInput command={command} />;
 }
