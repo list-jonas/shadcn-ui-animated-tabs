@@ -1,9 +1,9 @@
-import { Separator } from "@/components/ui/separator";
 import InstallationSection from "@/components/installation-section";
 import HorizontalTabsShowcase from "@/components/showcase/horizontal-tabs-showcase";
 import VerticalTabsShowcase from "@/components/showcase/vertical-tabs-showcase";
 import DefaultValueTabsShowcase from "@/components/showcase/default-value-tabs-showcase";
 import ScrollableTabsShowcase from "@/components/showcase/scrollable-tabs-showcase";
+import LegacyTabsShowcase from "@/components/showcase/legacy-tabs-showcase";
 
 const LandingPage = async () => {
   return (
@@ -12,12 +12,13 @@ const LandingPage = async () => {
         Showcase
       </h2>
 
-      <HorizontalTabsShowcase />
-      <VerticalTabsShowcase />
-      <DefaultValueTabsShowcase />
-      <ScrollableTabsShowcase />
-
-      <Separator />
+      <div className="flex flex-row flex-wrap gap-8">
+        <HorizontalTabsShowcase />
+        <VerticalTabsShowcase />
+        <DefaultValueTabsShowcase />
+        <ScrollableTabsShowcase />
+        <LegacyTabsShowcase />
+      </div>
 
       <InstallationSection />
     </main>

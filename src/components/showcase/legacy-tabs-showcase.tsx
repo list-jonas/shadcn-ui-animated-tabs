@@ -3,14 +3,14 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/../registry/animated-tabs/animated-tabs";
-import TabContent from "@/components/tab-content";
+} from "@/../registry/animated-tabs/legacy-animated-tabs";
+import TabContent from "../tab-content";
 
-export default function DefaultValueTabsShowcase() {
+export default function LegacyTabsShowcase() {
   return (
     <div className="w-full max-w-xl">
       <h2 className="scroll-m-20 text-xl font-semibold tracking-tight mb-4">
-        Default Value Tabs
+        Legacy Style
       </h2>
       <Tabs defaultValue="option2">
         <TabsList className={"mb-2"}>
