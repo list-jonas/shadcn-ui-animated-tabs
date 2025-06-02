@@ -12,8 +12,12 @@ export default function VerticalTabsShowcase() {
       <h2 className="scroll-m-20 text-xl font-semibold tracking-tight mb-4">
         Vertical Tabs
       </h2>
-      <Tabs defaultValue="option1" orientation="vertical">
-        <TabsList>
+      <Tabs
+        defaultValue="option1"
+        orientation="vertical"
+        className="flex flex-row gap-2"
+      >
+        <TabsList className="m-0 flex flex-col items-stretch w-full h-auto">
           <TabsTrigger value="option1">Option 1</TabsTrigger>
           <TabsTrigger value="option2">Option 2</TabsTrigger>
           <TabsTrigger value="option3">Option 3</TabsTrigger>
