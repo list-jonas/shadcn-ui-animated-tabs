@@ -3,15 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 interface TabContentProps {
   name: string;
+  className?: string;
 }
 
-const TabContent = ({ name }: TabContentProps) => {
+const TabContent = ({ name, className }: TabContentProps) => {
   return (
-    <Card>
+    <Card className={className}>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="min-h-[200px]">
         <p>
           {loremIpsum({
             count: 1,
