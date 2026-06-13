@@ -1,5 +1,4 @@
 import CopyButton from "@/components/copy-button";
-import { Input } from "./ui/input";
 
 interface CliCommandInputProps {
   command: string;
@@ -7,8 +6,13 @@ interface CliCommandInputProps {
 
 export default function CliCommandInput({ command }: CliCommandInputProps) {
   return (
-    <div className="w-full relative">
-      <Input value={command} className="font-mono w-full !cursor-text" />
+    <div className="group relative w-full rounded-lg border bg-muted/50">
+      <pre className="overflow-x-auto py-3 pl-4 pr-12 text-sm leading-relaxed">
+        <code className="font-mono whitespace-pre">
+          <span className="select-none text-muted-foreground">$ </span>
+          {command}
+        </code>
+      </pre>
       <CopyButton text={command} />
     </div>
   );

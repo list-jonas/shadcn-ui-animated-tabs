@@ -41,7 +41,12 @@ You can install the animated tabs component in two ways:
 
 2. Run the following command in your project directory:
 ```sh
-npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/animated-tabs.json
+npx shadcn@latest add list-jonas/shadcn-ui-animated-tabs/animated-tabs
+```
+
+   The component is distributed through the [shadcn GitHub registry](https://ui.shadcn.com/docs/registry/github), so no registry URL or hosting is required — the CLI reads `registry.json` straight from this repo. For the legacy (pre-Tailwind v4) version, run:
+```sh
+npx shadcn@latest add list-jonas/shadcn-ui-animated-tabs/legacy-animated-tabs
 ```
 
 ### Manual

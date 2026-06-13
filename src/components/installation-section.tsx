@@ -7,7 +7,7 @@ export default function InstallationSection() {
   const codeUrl =
     "https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/animated-tabs.tsx";
   const codeUrlLegacy =
-    "https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/legacy/registry/animated-tabs/animated-tabs.tsx";
+    "https://github.com/list-jonas/shadcn-ui-animated-tabs/blob/main/registry/animated-tabs/legacy-animated-tabs.tsx";
 
   return (
     <>

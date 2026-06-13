@@ -1,15 +1,17 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Check, Clipboard } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 interface CopyButtonProps {
   text: string;
+  className?: string;
 }
 
-export default function CopyButton({ text }: CopyButtonProps) {
+export default function CopyButton({ text, className }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -23,7 +25,11 @@ export default function CopyButton({ text }: CopyButtonProps) {
     <Button
       variant="outline"
       size="icon"
-      className="absolute top-0.5 right-0.5 p-2 rounded-md size-8"
+      aria-label="Copy command"
+      className={cn(
+        "absolute top-1/2 right-1.5 -translate-y-1/2 p-2 rounded-md size-8",
+        className
+      )}
       onClick={handleCopy}
     >
       {copied ? <Check size={16} /> : <Clipboard size={16} />}

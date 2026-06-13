@@ -7,8 +7,8 @@ interface CopyCLICommandProps {
 export default function CopyCLICommand({ version }: CopyCLICommandProps) {
   const command =
     version === "current"
-      ? "npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/animated-tabs.json"
-      : "npx shadcn@latest add https://shadcn-ui-animated-tabs.vercel.app/r/legacy-animated-tabs.json";
+      ? "npx shadcn@latest add list-jonas/shadcn-ui-animated-tabs/animated-tabs"
+      : "npx shadcn@latest add list-jonas/shadcn-ui-animated-tabs/legacy-animated-tabs";
 
   return <CliCommandInput command={command} />;
 }
