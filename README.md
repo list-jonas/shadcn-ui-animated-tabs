@@ -127,10 +127,10 @@ Thank you for checking out Shadcn/UI - Animated Tabs Styles! We hope this projec
 
 ## Star History
 
-<a href="https://star-history.com/#list-jonas/shadcn-ui-animated-tabs&Date">
+<a href="https://www.star-history.com/?type=date&repos=list-jonas%2Fshadcn-ui-animated-tabs">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=list-jonas/shadcn-ui-animated-tabs&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=list-jonas/shadcn-ui-animated-tabs&type=date&theme=dark&legend=top-left&sealed_token=7LKGmux4MBrwKffpnx7xuBdR2nTGbPTJpX4DyvPopVo3iqHTTwZyC_-3UMBlkAw99Zdaf9ARZihvuDPTK84b7ADnxKM_ntlfn5IlKbIyv5jeMAwENrDQgw" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=list-jonas/shadcn-ui-animated-tabs&type=date&legend=top-left&sealed_token=7LKGmux4MBrwKffpnx7xuBdR2nTGbPTJpX4DyvPopVo3iqHTTwZyC_-3UMBlkAw99Zdaf9ARZihvuDPTK84b7ADnxKM_ntlfn5IlKbIyv5jeMAwENrDQgw" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=list-jonas/shadcn-ui-animated-tabs&type=date&legend=top-left&sealed_token=7LKGmux4MBrwKffpnx7xuBdR2nTGbPTJpX4DyvPopVo3iqHTTwZyC_-3UMBlkAw99Zdaf9ARZihvuDPTK84b7ADnxKM_ntlfn5IlKbIyv5jeMAwENrDQgw" />
  </picture>
 </a>
